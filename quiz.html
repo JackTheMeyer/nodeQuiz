@@ -1,0 +1,69 @@
+<body>
+	<h1> Quiz </h1>
+	<nav>
+			<a href="index.html"> Home</a> |
+			<a href="topic.html"> Web 2.0</a> |
+			<a href="quiz.html"> Quiz</a> |
+			<a href="enhancments.html"> Enhancements</a> 
+	</nav>
+	
+
+	<form id="quizForm" method="post" action="register.html">
+
+		<fieldset>
+		<legend>Student Details</legend>
+			<p>
+				<label id="LGivenName" for="GivenName">Given Name</label> 
+				<input type="text" name= "GivenName" id="GivenName" pattern="[A-Za-z-\s]{1,25}" required="required" />
+				<label id="LFamilyName" for="FamilyName">Family Name</label> 
+				<input type="text" name= "FamilyName" id="FamilyName" maxlength="20" size="10" pattern="[A-Za-z-\s]{1,25}" required="required"/>
+			</p>
+			<p>
+				<label id="LStudentID" for="StudentID">Student ID</label> 
+				<input type="text" name= "StudentID" id="StudentID" required="required" pattern="^[0-9]{7}|[0-9]{9}|[0-9]{10}$"/>
+			</p>
+
+		</fieldset>
+		<fieldset>
+			<legend> Quiz Questions </legend>
+			<p id="timer"></p>
+				<h3><label for="Question_1">Type in, "True" or "False": Is web 2.0 the current terminology for websites with a dynamic user centered design? </label></h3>
+				<textarea id="Question_1" name="Question_1" rows="4" cols="40" required="required"></textarea>
+				<h3> 2. Web 2.0 is identified by: </h3>
+				<input type="radio" id="silly" name="Question 2" value="Lots of Colours" checked="checked" />
+				<label id="Lsilly" for="silly">Lots of colours</label> 
+				<br />
+				<input type="radio" id="Static" name="Question 2" value="Static"/>
+				<label id="LStatic" for="Static">Static content</label>
+				<br />
+				<input type="radio" id="Dynamic" name="Question 2" value="Dynamic"/>
+				<label id= "LDynamic" for="Dynamic">Dynamic or user generated content</label> 
+				<h3 id="LQ3"> 3. Select attributes of Web 2.0</h3>
+				<input type="checkbox" id="pageViews" name="Question 3" value="Page Views"/>
+				<label id="LpageViews" for="pageViews">Page views</label> 
+				<br />
+				<input type="checkbox" id="CPC" name="Question 3" value="Cost Per Click"/>
+				<label id="LCPC" for="CPC">Cost Per Click</label> 
+				<br />
+				<input type="checkbox" id="Directories" name="Question 3" value="Diretories"/>
+				<label id="LDirectories" for="Directories">Directories</label> 
+				<br />
+				<input type="checkbox" id="Tagging" name="Question 3" value="Tagging"/>
+				<label id="LTagging" for="Tagging">Tagging</label> 
+				<h3 id="LQ4"> 4. How many pioneers were listed on the topics page? </h3>
+				<label id="Lnumber" for="number">Choose between 1 - 10: </label>
+  				<input type="number" name="Question 4" id="number" value="1" min="1" max="10" />
+				<h3 id="LQ5"> 5. Select the website that isn't web 2.0</h3>
+				<label id="LSelect" for="Select">Please Select</label>
+				<select name="Question 5" id="Select">
+				<option value="YouTube">YouTube</option>			
+				<option value="Facebook">Instagram</option>
+				<option value="Flickr">Flickr</option>
+				<option value="BitTorrent">BitTorrent</option>
+				<option value="Brittanica">Brittannica</option>
+				<option value="Wikipedia">Wikipedia</option>
+			</select>
+	<input type= "submit" value="submit" id="submitButton"/>
+	<input type= "reset" value="Reset Form"/>
+</fieldset>
+</form>
